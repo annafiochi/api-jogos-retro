@@ -32,10 +32,10 @@ class AuthController {
         return res.status(400).json({ error: "Este email já está em uso!" });
       }
 
-      // const userNickmameExists = await UserModel.findByNickname(nickname);
-      // if ( userNickmameExists) {
-      //   return res.status(400).json({ error: "Este nickname já está em uso!" });
-      // }
+      const userNickmameExists = await UserModel.findByNickname(nickname);
+      if ( userNickmameExists) {
+        return res.status(400).json({ error: "Este nickname já está em uso!" });
+      }
 
 
 
