@@ -1,7 +1,7 @@
 import prisma from "../../prisma/prisma.js";
 
 class GameModel {
-    // Obter todas as cartas
+    // Obter todas os jogos
     async findAll() {
         const games = await prisma.game.findMany();
 
